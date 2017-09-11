@@ -4,6 +4,14 @@ class Api::ArtistsController < ApplicationController
         render json: @artists
     end
 
+    def new
+    @artists = Artist.new
+    end
+
+    def show
+        @artist = Artist.find(params[:id])
+    end
+
     def create
         @artist = Artist.create!(artist_params)
         redirect_to artist_path(@artist)
@@ -12,6 +20,10 @@ class Api::ArtistsController < ApplicationController
     def show
         @artist = Artist.find(params[:id])
         render json: @artist
+    end
+
+    def edit
+        @artist = Artist.find(params[:id])
     end
 
     def update
@@ -29,6 +41,6 @@ class Api::ArtistsController < ApplicationController
     private
 
     def artist_params
-        params.require(:artist).permit(:name, photo_url, :desccription, :location)
+        params.require(:artist).permit(:name, photo_url, :description, :location)
     end   
 end

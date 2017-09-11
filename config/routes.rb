@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
 namespace :api do
 
-    resources :artists do
-      resources :arts
-    end
+    resources :artists 
     resources :arts
 end
 end
