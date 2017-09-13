@@ -28,9 +28,9 @@ class EditArtist extends Component {
             console.log(artist)
             this.setState({
                 artist: {
-                    name: res.data.artist.name,
-                    photo_url: res.data.artist.photo_url,
-                    description: res.data.artist.description
+                    name: res.data.name,
+                    photo_url: res.data.photo_url,
+                    description: res.data.description
                 }
             });
         } catch (err) {
