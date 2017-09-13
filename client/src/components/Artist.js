@@ -40,6 +40,7 @@ class Artist extends Component {
                 <h1>{this.state.artist.name}</h1>
                 <img src={this.state.artist.photo_url}/>
                 <h3>{this.state.artist.description}</h3>
+                <Link to={`/artists/${this.props.match.params.id}/edit`}>Edit Artist</Link>
             </ArtistListStyles>
         );
     }
