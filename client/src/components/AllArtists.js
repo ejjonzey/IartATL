@@ -36,6 +36,7 @@ class AllArtists extends Component{
      }
 
      render(){
+         return(
             <div>
             <Link to='/artists/new'>Add Artist</Link>
             <ArtistListStyles>
