@@ -26,7 +26,7 @@ const GlobalNav = () => {
         <h1>IartATL</h1>
       </Link>
       <div>
-      <Link to='/artists'>Artist</Link>
+      <Link to='/artists'>Artists</Link>
         <Link to="/signup">Sign Up!</Link>
       </div>
     </Nav>
