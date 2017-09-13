@@ -19,9 +19,10 @@ const ArtistCard = (props) => {
   const artist = props.artist;
   return (
     <ArtistStyles>
-      <Link to={`/artist/${artist.id}`}>
+      <Link to={`/artists/${artist.id}`}>
         <img src={artist.photo_url} alt={artist.name} />
         <h3>{artist.name}</h3>
+        <h4>{artist.description}</h4>
       </Link>
     </ArtistStyles>
   );

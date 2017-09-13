@@ -6,8 +6,7 @@ class Artist extends Component {
     render() {
         return (
             <div>
-            <ArtistsCard/>
-
+        
             </div>
         );
     }
