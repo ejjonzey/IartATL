@@ -38,6 +38,16 @@ class EditArtist extends Component {
         }
     }
 
+    _deleteArtist = async (e)=>{
+        const id = this .props.match.params.id;
+        try{
+            const res = await axios.delete(`/api/artists/${id}`)
+            this.setState({redirect: true})
+        } catch(err){
+            console.log(err)
+        }
+    }
+
     handleChange = (e) => {
         const newState = {...this.state.artist};
         newState[e.target.name] = e.target.value;
@@ -64,22 +74,33 @@ class EditArtist extends Component {
         return (
             <div>
             <form onSubmit={this.handleSubmit}>
-                
-            <label>
-          Name:
-            <input type="text" name='name' value={this.state.artist.name} onChange={this.handleChange} />
+            <div> 
+            <label htmlFor="name">Name: </label>
+            <input type="text" name='name' 
+            value={this.state.artist.name} 
+            onChange={this.handleChange} />
+            </div>
             <br/>
-          Photo_url:
-            <input type="text" name='photo_url' value={this.state.artist.photo_url} onChange={this.handleChange} />
+            <div>
+            <label htmlFor="photo_url">Photo_url: </label>
+            <input type="text" name='photo_url' 
+            value={this.state.artist.photo_url} 
+            onChange={this.handleChange} />
+            </div>
             <br/>
-          Description:
-            <input type="text" name='description' value={this.state.artist.description} onChange={this.handleChange} />
+            <div>
+            <label htmlFor="description">Description: </label>
+            <input type="text" name='description' 
+            value={this.state.artist.description} 
+            onChange={this.handleChange} />
+            </div>
             <input type="submit" value="Submit" />
-            </label>
+        
             </form>
          {this.state.redirect && (
              <Redirect to={'/artists'}/>
          )}
+         <button onClick={this._deleteArtist}>DELETE</button>
          </div>
         );
     }

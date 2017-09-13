@@ -16,7 +16,7 @@ class AddArtist extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleChange(e){
+    handleChange=(e)=>{
         const newState = {...this.state.artist};
         newState[e.target.name] = e.target.value;
         this.setState({
