@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import ArtistsCard from './ArtistsCard';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+
 
 const ArtistListStyles = styled.div`
 margin: 20px 5%;
@@ -38,13 +40,17 @@ class AllArtists extends Component{
              return<h1>Not A Valid User</h1>
          }
          return(
-             <ArtistListStyles>
+            <div>
+            <Link to='/artists/new'>Add Artist</Link>
+            <ArtistListStyles>
                  {this.state.artists.map((artist)=>(
                      <ArtistsCard key={artist.id} artist={artist}/>
                  ))}
-                 </ArtistListStyles>
+            </ArtistListStyles>
+            </div>
          )
      }
 }
+
 
 export default AllArtists;
