@@ -41,7 +41,7 @@ class AllArtists extends Component{
          }
          return(
             <div>
-            <Link to='/artists/new'>Add Artist</Link>
+            <Link to='/artists/new'>Add hi Artist</Link>
             <ArtistListStyles>
                  {this.state.artists.map((artist)=>(
                      <ArtistsCard key={artist.id} artist={artist}/>
