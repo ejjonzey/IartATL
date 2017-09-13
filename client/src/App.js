@@ -16,9 +16,9 @@ class App extends Component {
           <GlobalNav/>
           <Route exact path='/' component={HomePage}/>
           <Route exact path='/artists' component={AllArtists}/>
-          <Route exact path='/artists/:id/edit' component={EditArtist}/>
           <Route exact path='/artists/new' component={AddArtist}/>
           <Route exact path='/artists/:id' component={Artist}/>
+          <Route exact path='/artists/:id/edit' component={EditArtist}/>
         </div>
      </Router>
     );
