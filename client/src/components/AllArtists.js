@@ -36,12 +36,8 @@ class AllArtists extends Component{
      }
 
      render(){
-         if (this.state.error){
-             return<h1>Not A Valid User</h1>
-         }
-         return(
             <div>
-            <Link to='/artists/new'>Add hi Artist</Link>
+            <Link to='/artists/new'>Add Artist</Link>
             <ArtistListStyles>
                  {this.state.artists.map((artist)=>(
                      <ArtistsCard key={artist.id} artist={artist}/>
