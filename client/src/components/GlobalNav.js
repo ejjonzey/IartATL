@@ -27,7 +27,7 @@ const GlobalNav = () => {
       </Link>
       <div>
       <Link to='/artists'>Artists</Link>
-        <Link to="/signup">Sign Up!</Link>
+      <Link to="/Signup">Sign Up!</Link>
       </div>
     </Nav>
   );
