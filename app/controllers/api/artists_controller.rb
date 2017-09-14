@@ -1,21 +1,25 @@
 class Api::ArtistsController < ApplicationController
     def index
+        @location = Location.find(params[:id])
         @artists = Artist.all
         render json: @artists
     end
 
     def show
+        @location = Location.find(params[:id])
         @artist = Artist.find(params[:id])
         render json: @artist
     end
 
 
     def create
+        @location = Location.find(params[:id])        
         @artist = Artist.create!(artist_params)
         render json: @artist
     end
 
     def update
+        @location = Location.find(params[:id])        
         @artist = Artist.find(params[:id])
         @artist.update!(artist_params)
         render json: @artist
@@ -23,6 +27,7 @@ class Api::ArtistsController < ApplicationController
 
 
     def destroy
+        @location = Location.find(params[:id])        
         @artist = Artist.find(params[:id])
         @artist.destroy
         render json:{
