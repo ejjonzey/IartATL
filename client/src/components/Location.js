@@ -12,7 +12,7 @@ flex-wrap: wrap;
 `;
 
 
-class Artist extends Component {
+class Location extends Component {
     constructor(){
         super();
         this.state = {
@@ -46,4 +46,4 @@ class Artist extends Component {
     }
 }
 
-export default Artist;
+export default Location;

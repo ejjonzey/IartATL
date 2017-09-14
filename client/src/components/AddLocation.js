@@ -19,7 +19,7 @@ input{
     font-family: 'Raleway', sans-serif;
 }`
 
-class AddArtist extends Component {
+class AddLocation extends Component {
     constructor(props){
         super(props);
         this.state={
@@ -80,4 +80,4 @@ class AddArtist extends Component {
     }
 }
 
-export default AddArtist;
+export default AddLocation;
