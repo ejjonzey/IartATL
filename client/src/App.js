@@ -6,6 +6,8 @@ import AllLocations from './components/AllLocations';
 import Location from './components/Location';
 import AddLocation from './components/AddLocation';
 import EditLocation from './components/EditLocation';
+import SignUp from './components/SignUp';
+import SignIn from './components/SignIn';
 
 
 class App extends Component {
@@ -19,6 +21,8 @@ class App extends Component {
           <Route exact path='/locations/new' component={AddLocation}/>
           <Route exact path='/locations/:id' component={Location}/>
           <Route exact path='/locations/:id/edit' component={EditLocation}/>
+          <Route exact path='/SignUp' component={SignUp}/>
+          <Route exact path='/SignIn' component={SignIn}/>
         </div>
      </Router>
     );
