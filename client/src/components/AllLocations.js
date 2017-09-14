@@ -38,7 +38,7 @@ class AllLocations extends Component{
      render(){
          return(
             <div>
-            <Link to='/artists/new'>Add Locations</Link>
+            <Link to='/locations/new'>Add Locations</Link>
             <ArtistListStyles>
                  {this.state.artists.map((artist)=>(
                      <LocationCard key={artist.id} artist={artist}/>
