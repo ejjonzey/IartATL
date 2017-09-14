@@ -23,11 +23,11 @@ const GlobalNav = () => {
   return (
     <Nav>
       <Link to="/">
-        <h1>IartATL</h1>
+        <h1>iARTatl</h1>
       </Link>
       <div>
       <Link to='/artists'>Artists</Link>
-        <Link to="/signup">Sign Up!</Link>
+      <Link to="/Signup">Sign Up!</Link>
       </div>
     </Nav>
   );
