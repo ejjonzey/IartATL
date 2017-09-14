@@ -1,3 +1,3 @@
 class Artist < ApplicationRecord
-    has_many :arts, dependent: :destroy
+    belongs_to :location, dependent: :destroy
 end
