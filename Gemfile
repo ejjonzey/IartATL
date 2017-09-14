@@ -42,3 +42,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'foreman', '~> 0.84.0'
 
+gem 'devise'
+gem 'omniauth'
+gem 'devise_token_auth'
