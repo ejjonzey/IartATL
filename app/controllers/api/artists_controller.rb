@@ -12,9 +12,9 @@ class Api::ArtistsController < ApplicationController
     end
 
 
-    def create
-        @location = Location.find(params[:id])        
+    def create        
         @artist = Artist.create!(artist_params)
+        @location = Location.find(params[:id])
         render json: @artist
     end
 
