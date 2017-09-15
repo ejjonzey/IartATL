@@ -3,6 +3,10 @@ import axios from 'axios';
 import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 
+const ArtistDiv = styled.div`
+background-color: #d5d698;
+`
+
 const ArtistListStyles = styled.div`
 margin: 20px 5%;
 width: 90%;
@@ -36,12 +40,14 @@ class Artist extends Component {
     render() {
 
         return (
+            <ArtistDiv>
             <ArtistListStyles>
                 <h1>{this.state.artist.name}</h1>
                 <img src={this.state.artist.photo_url}/>
                 <h3>{this.state.artist.description}</h3>
                 <Link to={`/artists/${this.props.match.params.id}/edit`}>Edit Artist</Link>
             </ArtistListStyles>
+            </ArtistDiv>
         );
     }
 }
