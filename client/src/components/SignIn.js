@@ -4,6 +4,13 @@ import axios from 'axios';
 import { setAxiosDefaults } from '../util';
 import styled from 'styled-components';
 
+const Button = styled.button`
+font-size: 1em;
+margin: 1em;
+padding: 0.25em 1em;
+border-radius: 3px;
+`;
+
 const Form = styled.form`
 display: flex;
 flex-direction: column;
@@ -72,7 +79,9 @@ class SignIn extends Component {
            <label htmlFor="password">Confirm Password: </label>
            <input onChange={this._handleChange} type="text" name="password_confirmation" value={this.state.password_confirmation} />
          </div>
+         <Button>
          <Link to="/signin">Sign In</Link>
+        </Button>
        </Form>
      </div>
    );
