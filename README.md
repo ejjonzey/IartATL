@@ -2,7 +2,7 @@
 
 # iARTatl:
 
-![logo](http://imgur.com/a/6muT6.png)
+![logo](https://i.imgur.com/L4PiWK9.jpg)
 
 ### Project Links:
 
