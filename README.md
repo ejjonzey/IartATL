@@ -1,24 +1,30 @@
-# README
+# Read Me
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# iARTatl:
 
-Things you may want to cover:
+![logo](https://imgur.com/a/6muT6)
 
-* Ruby version
+### Project Links:
 
-* System dependencies
+[Heroku](https://iartatl.herokuapp.com/)
+[Trello](https://trello.com/b/F8KLtWSq/iartatl)
 
-* Configuration
+This project was started as a capstone project for General Assembly's Web Development program.  
 
-* Database creation
+The problem this website is to solve is keeping track of all permanent mural artists and locations around the city of Atlanta.
 
-* Database initialization
+Users have the option of logging into a distinct profile and viewing all their saved artists and locations.  
 
-* How to run the test suite
+Users will eventually be able to add their locations to a map with icon for precise location.  
 
-* Services (job queues, cache servers, search engines, etc.)
+# Technologies used:
 
-* Deployment instructions
-
-* ...
+React on Rails 
+NPM
+Styled-components
+Postgresql
+Devise
+Foreman
+OmniAuth
+Javascript
+CSS
