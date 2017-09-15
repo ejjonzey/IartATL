@@ -2,12 +2,13 @@
 
 # iARTatl:
 
-[logo](https://imgur.com/a/6muT6)
+- [logo](https://imgur.com/a/6muT6)
 
 ### Project Links:
 
-[Heroku](https://iartatl.herokuapp.com/)
-[Trello](https://trello.com/b/F8KLtWSq/iartatl)
+- [Heroku](https://iartatl.herokuapp.com/)
+<br/>
+- [Trello](https://trello.com/b/F8KLtWSq/iartatl)
 
 This project was started as a capstone project for General Assembly's Web Development program.  
 
