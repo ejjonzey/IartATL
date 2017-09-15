@@ -19,7 +19,7 @@ input{
     font-family: 'Raleway', sans-serif;
 }`
 
-class EditLocation extends Component {
+class EditArtist extends Component {
     constructor(props){
         super(props);
         this.state={
@@ -123,4 +123,4 @@ class EditLocation extends Component {
     }
 }
 
-export default EditLocation;
+export default EditArtist;

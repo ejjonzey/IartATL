@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import LocationCard from './LocationCard';
+import ArtistsCard from './ArtistsCard';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
@@ -13,7 +13,7 @@ justify-content: space-around;
 flex-wrap: wrap;
 `;
 
-class AllLocations extends Component{
+class AllArtists extends Component{
     constructor(){
         super();
         this.state = {
@@ -38,10 +38,10 @@ class AllLocations extends Component{
      render(){
          return(
             <div>
-            <Link to='/locations/new'>Add Locations</Link>
+            <Link to='/artists/new'>Add Artist</Link>
             <ArtistListStyles>
                  {this.state.artists.map((artist)=>(
-                     <LocationCard key={artist.id} artist={artist}/>
+                     <ArtistsCard key={artist.id} artist={artist}/>
                  ))}
             </ArtistListStyles>
             </div>
@@ -50,4 +50,4 @@ class AllLocations extends Component{
 }
 
 
-export default AllLocations;
+export default AllArtists;

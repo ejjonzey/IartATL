@@ -16,7 +16,7 @@ const ArtistStyles = styled.div`
   }
 `;
 
-const LocationCard = (props) => {
+const ArtistCard = (props) => {
   const artist = props.artist;
   return (
     <ArtistStyles>
@@ -29,4 +29,4 @@ const LocationCard = (props) => {
   );
 };
 
-export default LocationCard;
+export default ArtistCard;

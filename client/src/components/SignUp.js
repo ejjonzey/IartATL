@@ -2,6 +2,22 @@ import React, { Component } from 'react';
 import { Redirect, Link } from 'react-router-dom';
 import axios from 'axios';
 import { saveAuthTokens } from '../util';
+import styled from 'styled-components';
+
+const Form = styled.form`
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+font-family: 'Raleway', sans-serif;
+input{
+    height: 50px;
+    width: 50vw;
+    font-size: 35px;
+    margin: 7px;
+    box-shadow: 0px 0px 15px black;
+    font-family: 'Raleway', sans-serif;
+}`
 
 
 class SignUp extends Component {
@@ -47,7 +63,7 @@ class SignUp extends Component {
    }
    return (
      <div>
-       <form onSubmit={this._signUp}>
+       <Form onSubmit={this._signUp}>
          <div>
            <label htmlFor="email">E-mail: </label>
            <input onChange={this._handleChange} type="text" name="email" value={this.state.email} />
@@ -63,7 +79,7 @@ class SignUp extends Component {
          
          <button>Sign Up</button>
          <Link to="/signin">Sign In</Link>
-       </form>
+       </Form>
      </div>
    );
  }

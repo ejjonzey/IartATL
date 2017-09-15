@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import GlobalNav from './components/GlobalNav';
 import HomePage from './components/HomePage';
-import AllLocations from './components/AllLocations';
-import Location from './components/Location';
-import AddLocation from './components/AddLocation';
-import EditLocation from './components/EditLocation';
+import AllArtists from './components/AllArtists';
+import Artist from './components/Artist';
+import AddArtist from './components/AddArtist';
+import EditArtist from './components/EditArtist';
 import SignUp from './components/SignUp';
 import SignIn from './components/SignIn';
+
 
 
 class App extends Component {
@@ -17,10 +18,10 @@ class App extends Component {
          <div>
           <GlobalNav/>
           <Route exact path='/' component={HomePage}/>
-          <Route exact path='/locations' component={AllLocations}/>
-          <Route exact path='/locations/new' component={AddLocation}/>
-          <Route exact path='/locations/:id' component={Location}/>
-          <Route exact path='/locations/:id/edit' component={EditLocation}/>
+          <Route exact path='/artists' component={AllArtists}/>
+          <Route exact path='/artists/new' component={AddArtist}/>
+          <Route exact path='/artists/:id' component={Artist}/>
+          <Route exact path='/artists/:id/edit' component={EditArtist}/>
           <Route exact path='/SignUp' component={SignUp}/>
           <Route exact path='/SignIn' component={SignIn}/>
         </div>
