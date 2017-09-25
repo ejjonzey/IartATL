@@ -43,9 +43,6 @@ class AllArtists extends Component{
      }
 
      render(){
-         if (this.state.error){
-             return<h1>Not A Valid User</h1>
-         }
          return(
             <div>
             <Button>
