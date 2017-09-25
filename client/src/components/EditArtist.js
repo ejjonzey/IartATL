@@ -1,6 +1,31 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import {Redirect} from 'react-router-dom'
+import {Redirect} from 'react-router-dom';
+import styled from 'styled-components';
+
+
+const Button = styled.button`
+font-size: 1em;
+margin: 1em;
+padding: 0.25em 1em;
+border-radius: 3px;
+`;
+
+
+const Form = styled.form`
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+font-family: 'Raleway', sans-serif;
+input{
+    height: 50px;
+    width: 50vw;
+    font-size: 35px;
+    margin: 7px;
+    box-shadow: 0px 0px 15px black;
+    font-family: 'Raleway', sans-serif;
+}`
 
 class EditArtist extends Component {
     constructor(props){
@@ -73,7 +98,7 @@ class EditArtist extends Component {
     render() {
         return (
             <div>
-            <form onSubmit={this.handleSubmit}>
+            <Form onSubmit={this.handleSubmit}>
             <div> 
             <label htmlFor="name">Name: </label>
             <input type="text" name='name' 
@@ -96,11 +121,11 @@ class EditArtist extends Component {
             </div>
             <input type="submit" value="Submit" />
         
-            </form>
+            </Form>
          {this.state.redirect && (
              <Redirect to={'/artists'}/>
          )}
-         <button onClick={this._deleteArtist}>DELETE</button>
+         <Button onClick={this._deleteArtist}>DELETE</Button>
          </div>
         );
     }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import GlobalNav from './components/GlobalNav';
+import GlobalFooter from './components/GlobalFooter';
 import HomePage from './components/HomePage';
 import AllArtists from './components/AllArtists';
 import Artist from './components/Artist';
@@ -19,7 +20,9 @@ class App extends Component {
           <Route exact path='/artists/:id/edit' component={EditArtist}/>
           <Route exact path='/artists/new' component={AddArtist}/>
           <Route exact path='/artists/:id' component={Artist}/>
+          <GlobalFooter/>
         </div>
+
      </Router>
     );
   }

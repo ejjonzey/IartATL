@@ -5,6 +5,13 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 
+const Button = styled.button`
+font-size: 1em;
+margin: 1em;
+padding: 0.25em 1em;
+border-radius: 3px;
+`;
+
 const ArtistListStyles = styled.div`
 margin: 20px 5%;
 width: 90%;
@@ -41,7 +48,9 @@ class AllArtists extends Component{
          }
          return(
             <div>
+            <Button>
             <Link to='/artists/new'>Add Artist</Link>
+            </Button>
             <ArtistListStyles>
                  {this.state.artists.map((artist)=>(
                      <ArtistsCard key={artist.id} artist={artist}/>
