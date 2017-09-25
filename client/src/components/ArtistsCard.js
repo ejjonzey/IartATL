@@ -4,6 +4,7 @@ import styled from 'styled-components'
 
 const ArtistStyles = styled.div`
   width: 30%;
+  height: 40em;
   margin: 20px 0; 
   box-shadow: 1px 1px 5px black;
   img {

@@ -1,6 +1,23 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import {Redirect} from 'react-router-dom'
+import styled from 'styled-components';
+
+
+const Form = styled.form`
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+font-family: 'Raleway', sans-serif;
+input{
+    height: 50px;
+    width: 50vw;
+    font-size: 35px;
+    margin: 7px;
+    box-shadow: 0px 0px 15px black;
+    font-family: 'Raleway', sans-serif;
+}`
 
 class EditArtist extends Component {
     constructor(props){
@@ -73,8 +90,8 @@ class EditArtist extends Component {
     render() {
         return (
             <div>
-            <form onSubmit={this.handleSubmit}>
-            <div> 
+            <Form onSubmit={this.handleSubmit}>
+            <div className='name'> 
             <label htmlFor="name">Name: </label>
             <input type="text" name='name' 
             value={this.state.artist.name} 
@@ -96,7 +113,7 @@ class EditArtist extends Component {
             </div>
             <input type="submit" value="Submit" />
         
-            </form>
+            </Form>
          {this.state.redirect && (
              <Redirect to={'/artists'}/>
          )}
